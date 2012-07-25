@@ -1,0 +1,85 @@
+name: Guilds
+main: me.avocardo.guilds.Guilds
+version: 2.0.4
+commands:
+  guilds:
+    description: Various commands for Guilds.
+    usage: /<command> <arg>
+  base:
+    description: TP to Base.
+    usage: /<command>
+  setbase:
+    description: Set Base.
+    usage: /<command> <guild>
+  gc:
+    description: Guilds Talk.
+    usage: /<command> <msg>
+permissions:
+    guilds.*:
+        description: Gives access to all guilds commands
+        children:
+            guilds.kick: true
+            guilds.join: true
+            guilds.join.open: true
+            guilds.join.closed: true
+            guilds.add: true
+            guilds.remove: true
+            guilds.create: true
+            guilds.list: true
+            guilds.restrict: true
+            guilds.permissions: true
+            guilds.traits: true
+            guilds.abilities: true
+            guilds.base: true
+            guilds.setbase: true
+            guilds.chat: true
+    guilds.kick:
+        description: Permission
+        default: op
+    guilds.join:
+        description: Permission
+        default: true
+    guilds.join.open:
+        description: Permission
+        default: true
+    guilds.join.closed:
+        description: Permission
+        default: false
+    guilds.join.*:
+        description: Permission
+        children:
+            guilds.join.open: true
+            guilds.join.closed: true
+    guilds.add:
+        description: Permission
+        default: op
+    guilds.remove:
+        description: Permission
+        default: op
+    guilds.create:
+        description: Permission
+        default: op
+    guilds.list:
+        description: Permission
+        default: true
+    guilds.restrict:
+        description: Permission
+        default: op
+    guilds.permissions:
+        description: Permission
+        default: op
+    guilds.traits:
+        description: Permission
+        default: op
+    guilds.abilities:
+        description: Permission
+        default: op
+    guilds.setbase:
+        description: Permission
+        default: op
+    guilds.base:
+        description: Permission
+        default: true
+    guilds.chat:
+        description: Permission
+        default: true
